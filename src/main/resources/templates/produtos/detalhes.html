@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout/base :: page}">
+<head>
+    <title>Detalhes do Produto</title>
+</head>
+<body>
+<div th:fragment="page">
+    <h1 class="mb-4">👁️ Detalhes do Produto</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">ID:</dt>
+                <dd class="col-sm-9" th:text="${produto.id}">1</dd>
+
+                <dt class="col-sm-3">Nome:</dt>
+                <dd class="col-sm-9" th:text="${produto.nome}">Produto</dd>
+
+                <dt class="col-sm-3">Tipo:</dt>
+                <dd class="col-sm-9" th:text="${produto.tipo}">Eletrônico</dd>
+
+                <dt class="col-sm-3">Setor:</dt>
+                <dd class="col-sm-9" th:text="${produto.setor}">Perfumaria</dd>
+
+                <dt class="col-sm-3">Tamanho:</dt>
+                <dd class="col-sm-9" th:text="${produto.tamanho}">M</dd>
+
+                <dt class="col-sm-3">Preço:</dt>
+                <dd class="col-sm-9" th:text="'R$ ' + ${produto.preco}">R$ 10.00</dd>
+            </dl>
+
+            <div class="d-flex gap-2">
+                <a th:href="@{/web/produtos/{id}/editar(id=${produto.id})}" class="btn btn-warning">✏️ Editar</a>
+                <a href="/web/produtos" class="btn btn-secondary">← Voltar</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

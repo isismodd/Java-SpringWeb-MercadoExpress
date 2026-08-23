@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout/base :: page}">
+<head>
+    <title>Editar Produto</title>
+</head>
+<body>
+<div th:fragment="page">
+    <h1 class="mb-4">✏️ Editar Produto</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <form th:action="@{/web/produtos/{id}(id=${id})}"
+                  th:object="${produto}" method="post">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome *</label>
+                    <input type="text" id="nome" th:field="*{nome}" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="tipo" class="form-label">Tipo</label>
+                    <input type="text" id="tipo" th:field="*{tipo}" class="form-control"
+                           placeholder="Ex: Eletrônico, Alimento, Roupa...">
+                </div>
+
+                <div class="mb-3">
+                    <label for="setor" class="form-label">Setor</label>
+                    <input type="text" id="setor" th:field="*{setor}" class="form-control"
+                           placeholder="Ex: Eletrodomésticos, Perfumaria...">
+                </div>
+
+                <div class="mb-3">
+                    <label for="tamanho" class="form-label">Tamanho</label>
+                    <input type="text" id="tamanho" th:field="*{tamanho}" class="form-control"
+                           placeholder="Ex: P, M, G, 10x15cm...">
+                </div>
+
+                <div class="mb-3">
+                    <label for="preco" class="form-label">Preço *</label>
+                    <input type="number" step="0.01" id="preco" th:field="*{preco}"
+                           class="form-control" required placeholder="0.00">
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">💾 Atualizar</button>
+                    <a href="/web/produtos" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package br.com.fiap.mercadoexpress.common;
+package br.com.fiap.mercadoexpress.produto.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

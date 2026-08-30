@@ -16,14 +16,14 @@ public class ProdutoWebController {
 
     private final ProdutoService produtoService;
 
-    // 📋 LISTAR todos os produtos
+    // LISTAR todos os produtos
     @GetMapping
     public String listarProdutos(Model model) {
         model.addAttribute("produtos", produtoService.findAll());
         return "produtos/lista";
     }
 
-    // ➕ FORMULÁRIO para criar
+    // FORMULÁRIO para criar
     @GetMapping("/novo")
     public String mostrarFormularioCriacao(Model model) {
         // Criar um ProdutoRequest vazio usando o Record
@@ -31,7 +31,7 @@ public class ProdutoWebController {
         return "produtos/cadastro";
     }
 
-    // 💾 CREATE - salvar novo produto
+    // CREATE - salvar novo produto
     @PostMapping
     public String criarProduto(@ModelAttribute ProdutoRequest request,
                                RedirectAttributes redirectAttributes) {
@@ -40,7 +40,7 @@ public class ProdutoWebController {
         return "redirect:/web/produtos";
     }
 
-    // 👁️ READ - detalhes de um produto
+    // READ - detalhes de um produto
     @GetMapping("/{id}")
     public String detalharProduto(@PathVariable Long id, Model model) {
         Produto produto = produtoService.findById(id);
@@ -48,7 +48,7 @@ public class ProdutoWebController {
         return "produtos/detalhes";
     }
 
-    // ✏️ FORMULÁRIO para editar
+    // FORMULÁRIO para editar
     @GetMapping("/{id}/editar")
     public String mostrarFormularioEdicao(@PathVariable Long id, Model model) {
         Produto produto = produtoService.findById(id);
@@ -67,7 +67,7 @@ public class ProdutoWebController {
         return "produtos/editar";
     }
 
-    // 🔄 UPDATE - atualizar produto
+    // UPDATE - atualizar produto
     @PostMapping("/{id}")
     public String atualizarProduto(@PathVariable Long id,
                                    @ModelAttribute ProdutoRequest request,
@@ -77,7 +77,7 @@ public class ProdutoWebController {
         return "redirect:/web/produtos";
     }
 
-    // 🗑️ DELETE - remover produto
+    // DELETE - remover produto
     @PostMapping("/{id}/delete")
     public String deletarProduto(@PathVariable Long id,
                                  RedirectAttributes redirectAttributes) {

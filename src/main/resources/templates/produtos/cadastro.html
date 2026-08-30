@@ -8,7 +8,12 @@
 </head>
 <body>
 <div class="container mt-5">
-    <h1>➕ Cadastrar Produto</h1>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>Cadastrar Produto</h1>
+        <a href="/web/produtos" class="btn btn-outline-secondary">
+            <i class="fas fa-arrow-left me-2"></i> Voltar
+        </a>
+    </div>
 
     <div class="card">
         <div class="card-body">
@@ -38,13 +43,21 @@
                     <input type="number" step="0.01" id="preco" th:field="*{preco}" class="form-control" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary">💾 Salvar</button>
-                <a href="/web/produtos" class="btn btn-secondary">Cancelar</a>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-save me-2"></i> Salvar
+                    </button>
+                    <a href="/web/produtos" class="btn btn-outline-secondary">
+                        <i class="fas fa-times me-2"></i> Cancelar
+                    </a>
+                </div>
             </form>
         </div>
     </div>
 </div>
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
 </body>
 </html>

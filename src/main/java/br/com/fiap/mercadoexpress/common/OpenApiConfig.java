@@ -13,7 +13,7 @@ public class OpenApiConfig {
         return new OpenAPI()
                 .info(new Info()
                         .title("Mercado Express API")
-                        .description("CRUD de produtos de um mercado express (Checkpoint 4 - Java Advanced)")
+                        .description("CRUD de produtos mercado express")
                         .version("v1"));
     }
 }

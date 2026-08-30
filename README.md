@@ -61,7 +61,7 @@ A aplicação está disponível online no Render. Para acessar qualquer recurso,
 
 ### Funcionalidades e Telas
 
-1. Tela de Login
+#### 1. Tela de Login
 Tela de autenticação para acesso seguro à aplicação.
 
 <img width="800" alt="Login" src="https://github.com/user-attachments/assets/be959c92-bb64-478b-949f-856f6571d182" />
@@ -76,7 +76,7 @@ Redirecionamento para a pagina home após login
 
 ---
 
-2. Página Home
+#### 2. Página Home
 Página inicial da aplicação com apresentação do sistema e navegação para as funcionalidades principais.
 
 <img width="800" alt="Home" src="https://github.com/user-attachments/assets/4b117322-b9d0-4484-914e-32e7947bd62f" />
@@ -89,7 +89,7 @@ Página inicial da aplicação com apresentação do sistema e navegação para 
 
 ---
 
-3. Lista de Produtos
+#### 3. Lista de Produtos
 Consulta e exibição de todos os produtos cadastrados no banco de dados.
 
 <img width="800" alt="Lista de Produtos" src="https://github.com/user-attachments/assets/bf93bf19-1b74-40c6-9223-63607881651e" />
@@ -108,7 +108,7 @@ Ao acessar a lista de produtos, o sistema executa uma consulta à tabela `TDS_TB
 ---
 
 
-4. Detalhes do Produto
+#### 4. Detalhes do Produto
 Visualização detalhada de um produto específico.
 
 <img width="800" alt="Detalhes do Produto" src="https://github.com/user-attachments/assets/a9773f82-d220-4d11-843b-c1ab4e470f39" />
@@ -123,7 +123,7 @@ Ao clicar em "Visualizar" em um produto da lista, o sistema realiza uma consulta
 
 ---
 
-5. Editar Produto
+#### 5. Editar Produto
 Atualização de informações de um produto existente.
 
 <img width="800" alt="Editar Produto" src="https://github.com/user-attachments/assets/ae7cf705-9c05-4ea8-ac73-3eb3377f2b4b" />
@@ -138,7 +138,7 @@ Ao editar um produto, o sistema primeiro busca os dados atuais na tabela `TDS_TB
 
 ---
 
-6. Cadastrar Produto
+#### 6. Cadastrar Produto
 Inserção de um novo produto no banco de dados.
 
 <img width="800" alt="Cadastrar Produto" src="https://github.com/user-attachments/assets/39d140e9-5921-4743-8606-7cb666536c1a" />

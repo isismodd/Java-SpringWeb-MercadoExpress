@@ -36,6 +36,7 @@ O projeto foi desenvolvido seguindo os princípios do **HATEOAS (Nível 3 de Mat
 - **Git/GitHub** - Controle de versão
 - **Render** - Hospedagem da aplicação
 
+---
 
 ## Acessar a Aplicação
 
@@ -73,10 +74,13 @@ Validação de credenciais
 
 Redirecionamento após login
 
+---
+
 2. Página Home
 Página inicial da aplicação com apresentação do sistema e navegação para as funcionalidades principais.
 
 <img width="800" alt="Home" src="https://github.com/user-attachments/assets/4b117322-b9d0-4484-914e-32e7947bd62f" />
+
 
 Funcionalidades:
 
@@ -85,6 +89,8 @@ Navegação para lista de produtos
 Navegação para cadastro de produtos
 
 Design responsivo com imagem de fundo
+
+---
 
 3. Lista de Produtos
 Consulta e exibição de todos os produtos cadastrados no banco de dados.
@@ -107,6 +113,8 @@ Spring Data JPA para consulta ao banco de dados
 
 Thymeleaf para renderização da tabela
 
+---
+
 
 4. Detalhes do Produto
 Visualização detalhada de um produto específico.
@@ -121,6 +129,7 @@ Exibição de todas as informações do produto
 
 Botões para Editar, Deletar e Voltar
 
+---
 
 5. Editar Produto
 Atualização de informações de um produto existente.
@@ -134,6 +143,8 @@ Carregamento dos dados atuais do produto
 Validação dos campos obrigatórios
 
 Atualização via PUT /api/produtos/{id}
+
+---
 
 6. Cadastrar Produto
 Inserção de um novo produto no banco de dados.

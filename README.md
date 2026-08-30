@@ -66,13 +66,13 @@ Tela de autenticação para acesso seguro à aplicação.
 
 <img width="800" alt="Login" src="https://github.com/user-attachments/assets/be959c92-bb64-478b-949f-856f6571d182" />
 
-Funcionalidades:
 
-Autenticação com Spring Security
 
-Validação de credenciais
+**Funcionalidades:**
+- Navegação para lista de produtos `/web/produtos`
+- Navegação para cadastro de produtos `/web/produtos/novo`
+- Design responsivo com imagem de fundo
 
-Redirecionamento para a pagina home após login
 
 ---
 

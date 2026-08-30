@@ -72,7 +72,7 @@ Autenticação com Spring Security
 
 Validação de credenciais
 
-Redirecionamento após login
+Redirecionamento para a pagina home após login
 
 ---
 
@@ -82,13 +82,10 @@ Página inicial da aplicação com apresentação do sistema e navegação para 
 <img width="800" alt="Home" src="https://github.com/user-attachments/assets/4b117322-b9d0-4484-914e-32e7947bd62f" />
 
 
-Funcionalidades:
-
-Navegação para lista de produtos
-
-Navegação para cadastro de produtos
-
-Design responsivo com imagem de fundo
+**Funcionalidades:**
+- Navegação para lista de produtos `/web/produtos`
+- Navegação para cadastro de produtos `/web/produtos/novo`
+- Design responsivo com imagem de fundo
 
 ---
 
@@ -97,21 +94,16 @@ Consulta e exibição de todos os produtos cadastrados no banco de dados.
 
 <img width="800" alt="Lista de Produtos" src="https://github.com/user-attachments/assets/bf93bf19-1b74-40c6-9223-63607881651e" />
 
-Funcionalidades:
+**Funcionalidades:**
+- Listagem de todos os produtos via `GET /api/produtos`
+- Dados consultados diretamente do banco Oracle na tabela `TDS_TB_MERCADO`
+- Botões de ação: Visualizar, Editar e Deletar
+- Atualização automática da lista após operações
 
-Listagem de todos os produtos via GET /api/produtos
+- Spring Data JPA para consulta ao banco de dados
 
-Dados consultados diretamente do banco Oracle
+Ao acessar a lista de produtos, o sistema executa uma consulta à tabela `TDS_TB_MERCADO` no banco de dados Oracle. A consulta é realizada através do repositório JPA, que retorna todos os registros da tabela para exibição na interface.
 
-Botões de ação: Visualizar, Editar e Deletar
-
-Atualização automática da lista após operações
-
-Tecnologia utilizada:
-
-Spring Data JPA para consulta ao banco de dados
-
-Thymeleaf para renderização da tabela
 
 ---
 
@@ -121,13 +113,13 @@ Visualização detalhada de um produto específico.
 
 <img width="800" alt="Detalhes do Produto" src="https://github.com/user-attachments/assets/a9773f82-d220-4d11-843b-c1ab4e470f39" />
 
-Funcionalidades:
+**Funcionalidades:**
+- Busca de produto por ID via `GET /api/produtos/{id}`
+- Exibição de todas as informações do produto
+- Botões para Editar, Deletar e Voltar
 
-Busca de produto por ID via GET /api/produtos/{id}
-
-Exibição de todas as informações do produto
-
-Botões para Editar, Deletar e Voltar
+**Detalhes da Consulta:**
+Ao clicar em "Visualizar" em um produto da lista, o sistema realiza uma consulta específica à tabela `TDS_TB_MERCADO` filtrando pelo `ID` do produto selecionado. A consulta é executada via Spring Data JPA e retorna os dados completos do produto para exibição
 
 ---
 
@@ -136,13 +128,13 @@ Atualização de informações de um produto existente.
 
 <img width="800" alt="Editar Produto" src="https://github.com/user-attachments/assets/ae7cf705-9c05-4ea8-ac73-3eb3377f2b4b" />
 
-Funcionalidades:
+**Funcionalidades:**
+- Carregamento dos dados atuais do produto via `GET /api/produtos/{id}`
+- Validação dos campos obrigatórios
+- Atualização via `PUT /api/produtos/{id}`
 
-Carregamento dos dados atuais do produto
-
-Validação dos campos obrigatórios
-
-Atualização via PUT /api/produtos/{id}
+**Detalhes da Atualização:**
+Ao editar um produto, o sistema primeiro busca os dados atuais na tabela `TDS_TB_MERCADO` e, após a validação, executa um `UPDATE` na tabela para persistir as alterações.
 
 ---
 
@@ -150,13 +142,13 @@ Atualização via PUT /api/produtos/{id}
 Inserção de um novo produto no banco de dados.
 
 <img width="800" alt="Cadastrar Produto" src="https://github.com/user-attachments/assets/39d140e9-5921-4743-8606-7cb666536c1a" />
-Funcionalidades:
 
-Formulário com validação de campos obrigatórios
+**Funcionalidades:**
+- Formulário com validação de campos obrigatórios
+- Inserção via `POST /api/produtos`
+- Redirecionamento para lista após cadastro
 
-Inserção via POST /api/produtos
-
-Redirecionamento para lista após cadastro
-
+**Detalhes da Inserção:**
+Ao cadastrar um novo produto, o sistema executa um `INSERT` na tabela `TDS_TB_MERCADO`, persistindo os dados informados no formulário.
 
 
